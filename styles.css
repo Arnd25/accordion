@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#EAEEFA,#C5D2F5);
+    font-family: 'Poopins', sans-serif;
+}
+.accordion-container__title {
+    color: #242D4E;
+    font-size: 78px;
+    max-width: 550px;
+}
+.accordion-container__title span {
+    color: #5D84FF;
+}
+.accordion__container{
+
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+.accordion-menu {
+    display: grid;
+    row-gap: 10px;
+    width: 100%;
+    background: #FFF;
+    margin: 0 1rem;
+    padding: 30px;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 50px rgba(0,0,0,0.2);
+}
+.accordion-content {
+
+}
+.accordion-content-header {
+    display: flex;
+    column-gap: 10px;
+
+}
+.accordion-content i  {
+    transition: 200ms;
+}
+.accordion-content--about {
+    border-left: 5px solid #EFC99C;
+    background: #FFF6ED;
+}
+.accordion-content--used {
+    border-left: 5px solid #8B8DE1;
+    background: #EFF1FE;
+}
+.accordion-content--opened {
+    border-left: 5px solid #E995A9;
+    background: #FFF0F3;
+}
+.accordion-content--icon {
+    border-left: 5px solid #9AD2EB;
+    background: #EEF9FF;
+}
+.accordion-content:is(.is-open) .accordion-content-header i {
+    rotate: 45deg;
+    transition: 300ms;
+}
+.accordion-content  {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    border-radius: 5px;
+    row-gap: 20px;
+    padding: 30px 50px 30px 20px;
+    width: 500px;
+}
+.accordion-content__title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #3E3F51;
+}
+.accordion-content__description {
+    display: none;
+    max-width: 385px;
+    font-size: 14px;
+    color: #686A77;
+    font-weight: 400;
+    padding-left: 25px;
+    transition: 200ms;
+    line-height: 20px;
+}
+.accordion-content:is(.is-open) .accordion-content__description {
+    display: block;
+}
+
+
+
+
